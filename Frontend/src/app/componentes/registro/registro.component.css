@@ -1,0 +1,9 @@
+div#registro {
+  width: 375px;
+  background: aquamarine;
+  color: white;
+  padding: 40px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 20;
+}

@@ -1,0 +1,108 @@
+<app-menulateral></app-menulateral>
+<div class="ventanaflotante">
+  <div class="tituloventana">Productos</div>
+
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let item of datos">
+        <tr (click)="SeleccionarId(item._id)">
+          <td>{{ item.codigo }}</td>
+          <td>{{ item.nombre }}</td>
+          <td>{{ item.estado }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+
+  <div class="btnnuevo" (click)="Nuevo()">+</div>
+</div>
+
+<!-- Button trigger modal -->
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="form-group">
+        <label for="codigo">Codigo</label>
+        <input
+          type="text"
+          class="form-control"
+          id="codigo"
+          [(ngModel)]="codigo"
+        />
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            [(ngModel)]="nombre"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado</label>
+          <select class="form-control" id="estado" [(ngModel)]="estado">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="Eliminar()"
+          *ngIf="idseleccionado != ''"
+        >
+          Eliminar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="Actualizar()"
+          *ngIf="idseleccionado != ''"
+        >
+          Actualizar
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="Guardar()"
+          *ngIf="idseleccionado == ''"
+        >
+          Guardar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

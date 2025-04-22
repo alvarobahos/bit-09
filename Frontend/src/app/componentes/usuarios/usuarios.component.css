@@ -1,0 +1,14 @@
+.btnnuevo {
+  width: 50px;
+  background: white;
+  height: 50px;
+  font-size: 27px;
+  color: navy;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 900;
+  position: absolute;
+  right: 5px;
+  bottom: 6px;
+  cursor: pointer;
+}

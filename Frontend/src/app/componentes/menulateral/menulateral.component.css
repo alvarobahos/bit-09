@@ -1,0 +1,47 @@
+.menu {
+  width: 125px;
+  background: aquamarine;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  border-radius: 20px;
+}
+
+.avatar img {
+  width: 100%;
+  padding: 3px;
+  margin-left: 0px;
+  border-radius: 20px;
+}
+
+.lblnombre {
+  width: 100%;
+  color: navy;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.lblrol {
+  width: 100%;
+  color: navy;
+  text-align: center;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 37px;
+}
+
+.itemmenu {
+  width: 100%;
+  color: navy;
+  text-align: left;
+  font-weight: 600;
+  font-style: italic;
+  padding-left: 7px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+}
+.itemmenu:hover {
+  padding-left: 7px;
+}
