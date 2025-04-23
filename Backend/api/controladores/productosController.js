@@ -3,8 +3,8 @@ var productosModel = require("../modelos/productosModel.js").productosModel;
 
 productosController.Guardar = function (request, response) {
   var post = {
-    nombre: request.body.nombre,
     codigo: request.body.codigo,
+    nombre: request.body.nombre,
     estado: request.body.estado,
   };
 
@@ -70,9 +70,9 @@ productosController.ListarId = function (request, response) {
 
 productosController.Actualizar = function (request, response) {
   var post = {
+    id: request.body.id,
     nombre: request.body.nombre,
     estado: request.body.estado,
-    id: request.body.id,
   };
 
   if (post.id == undefined || post.id == null || post.id == "") {
